@@ -59,7 +59,7 @@ resource "aws_docdb_cluster" "docdb" {
   skip_final_snapshot     = true
 }
 
-resource "aws_memorydb_cluster" "example" {
+resource "aws_memorydb_cluster" "-example" {
   acl_name                 = "open-access"
   name                     = "my-cluster"
   node_type                = "db.t4g.small"
