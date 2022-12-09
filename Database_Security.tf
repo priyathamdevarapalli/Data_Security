@@ -1,6 +1,6 @@
 resource "aws_ebs_volume" "example" {
   availability_zone = "us-west-2a"
-  size              = 40
+  size              = 50
   encrypted = false
   tags = {
     Name = "HelloWorld"
