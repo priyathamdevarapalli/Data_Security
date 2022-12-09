@@ -1,4 +1,4 @@
-resource "aws_ebs_volume" "example" {
+resource "aws_ebs_volume" "-example" {
   availability_zone = "us-west-2a"
   size              = 40
   encrypted = false
@@ -7,7 +7,7 @@ resource "aws_ebs_volume" "example" {
   }    
 }
 
-resource "aws_ebs_snapshot" "example_snapshot" {
+resource "aws_ebs_snapshot" "example_-snapshot" {
   volume_id = aws_ebs_volume.example.id
   encrypted = false
   tags = {
@@ -15,14 +15,14 @@ resource "aws_ebs_snapshot" "example_snapshot" {
   }
 }
 
-resource "aws_db_instance" "example" {
+resource "aws_db_instance" "-example" {
   # ... other configuration ...
   storage_encrypted = false
   allocated_storage     = 50
   max_allocated_storage = 100
 }
 
-resource "aws_rds_cluster_instance" "example" {
+resource "aws_rds_cluster_instance" "1example" {
   cluster_identifier = aws_rds_cluster.example.id
   instance_class     = "db.serverless"
   storage_encrypted = false
@@ -30,7 +30,7 @@ resource "aws_rds_cluster_instance" "example" {
   engine_version     = aws_rds_cluster.example.engine_version
 }
 
-resource "aws_neptune_cluster" "default" {
+resource "aws_neptune_cluster" "default3" {
   cluster_identifier                  = "neptune-cluster-demo"
   engine                              = "neptune"
   backup_retention_period             = 5
@@ -42,13 +42,13 @@ resource "aws_neptune_cluster" "default" {
   apply_immediately                   = true
 }
 
-resource "aws_qldb_ledger" "sample-ledger" {
+resource "aws_qldb_ledger" "sample-ledge-r" {
   name             = "sample-ledger"
   permissions_mode = "STANDARD"
   deletion_protection = false
 }
 
-resource "aws_docdb_cluster" "docdb" {
+resource "aws_docdb_cluster" "docdb2" {
   cluster_identifier      = "my-docdb-cluster"
   engine                  = "docdb"
   master_username         = "foo"
@@ -59,7 +59,7 @@ resource "aws_docdb_cluster" "docdb" {
   skip_final_snapshot     = true
 }
 
-resource "aws_memorydb_cluster" "example" {
+resource "aws_memorydb_cluster" "3example" {
   acl_name                 = "open-access"
   name                     = "my-cluster"
   node_type                = "db.t4g.small"
