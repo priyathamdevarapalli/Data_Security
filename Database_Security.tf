@@ -4,7 +4,7 @@ resource "aws_ebs_volume" "example" {
   encrypted = false
   tags = {
     Name = "HelloWorld"
-  }    
+  }   
 }
 
 resource "aws_ebs_snapshot" "example_snapshot" {
