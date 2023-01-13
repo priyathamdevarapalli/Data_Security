@@ -1,6 +1,6 @@
 resource "aws_instance" "my-machine" {
   # Creates twelve identical aws ec2 instances
-  count = 123
+  count = 12
   
   # All four instances will have the same ami and instance_type
   ami = lookup(var.ec2_ami,var.region) 
