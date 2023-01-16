@@ -1,6 +1,6 @@
 resource "aws_instance" "my-machine" {
   # Creation of 11 instances
-  count = 13
+  count = 19
   ebs_optimized = true
   monitoring = true
   metadata_options {
