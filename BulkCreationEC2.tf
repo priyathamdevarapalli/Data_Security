@@ -1,6 +1,6 @@
 resource "aws_instance" "my-machine" {
   # Creating More than 10 instances will be considered as a violation
-  count = 32
+  count = 11
   ebs_optimized = true
   monitoring = true
   metadata_options {
