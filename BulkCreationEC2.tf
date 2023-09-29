@@ -1,18 +1,21 @@
 resource "aws_instance" "my-machine" {
   # Creating More than 10 instances will be considered as a violation
-  count = 20
+  count         = 20
   ebs_optimized = true
-  monitoring = true
+  monitoring    = true
   metadata_options {
-           http_endpoint = "enabled"
-           http_tokens   = "required"
+    http_endpoint = "enabled"
+    http_tokens   = "required"
   }
   # All four instances will have the same ami and instance_type
-  ami = lookup(var.ec2_ami,var.region) 
+  ami           = lookup(var.ec2_ami, var.region)
   instance_type = var.instance_type # 
   tags = {
     # The count.index allows you to launch a resource 
     # starting with the distinct index number 0 and corresponding to this instance.
-    Name = "my-machine-${count.index}"
+    Name                                                                                                                                                = "my-machine-${count.index}"
+    "# The count.index allows you to launch a resource \n    # starting with the distinct index number 0 and corresponding to this instance.\n    Name" = "my-machine-$${count.index}"
+    git_repo                                                                                                                                            = "Data_Security"
+    yor_trace                                                                                                                                           = "ed804f8b-1cdb-4b81-87cb-a6870561b72c"
   }
 }
