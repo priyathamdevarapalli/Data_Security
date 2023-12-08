@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: awscli
+  namespace: frontend
+spec:
+  containers:
+   - name: awscli
+     image: sdscello/awscli:latest
+     imagePullPolicy: IfNotPresent
+  restartPolicy: Always
